@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+</html>
+	<head>
+	  <meta charset="utf-8">
+	  <title>JS-12</title>
+	  <script type="text/javascript"> 
+		  var aCircle = {
+			  r : 5.5,
+			  getArea : function () {
+				  return this.r*this.r*Math.PI;
+			  },
+			  getCircumference: getCF
+		  };
+		  function getCF() {return 2*this.r*Math.PI};
+		  console.log(aCircle.r);
+		  console.log(aCircle["r"]);
+		  console.log(aCircle.getArea());
+		  console.log(aCircle.getCircumference());
+ 	  </script>
+	</head>
+	<body>
+	  <p>Hello to Javascript</p>
+	</body>
+</html>
+
+

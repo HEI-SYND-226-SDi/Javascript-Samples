@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+</html>
+	<head>
+	  <meta charset="utf-8">
+	  <title>JS-9</title>
+	  <script type="text/javascript"> 
+	  var someNumber = 5; //global variable
+      function calc(op) {
+		var add = function() {
+		            console.log('in add');
+					var sum = 0; //local variable
+					for (var i = 0; i < arguments.length; i++) {
+					  sum += Number(arguments[i]);
+		  			}
+		  			return sum;
+        		  };
+        if (op === 'add') {
+          return add;   // return a named nested function
+        } else if (op === 'mul') {
+          return function(a1, a2) {
+                   console.log('in mul');
+                   a2 = a2 || 1;
+                   return a1 * a2
+                 };            
+        } else {
+          return function() {return "error: invalid argument"};
+        }
+      }  
+      console.log(calc("mul")(someNumber,5));
+      console.log(calc("add")(1,2,"13", 0xA, 0b11));
+      console.log(calc("mul")(4));
+      console.log(calc("sub")());
+ 	  </script>
+	</head>
+	<body>
+	  <p>Welcome to JavaScript!</p>
+	</body>
+</html>
+
+

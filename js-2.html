@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+  <title>JS-2</title>
+  <script type="text/javascript">
+	var day = prompt("Enter a day short : ","");
+	switch (day) {
+		case 'sat': case 'sun': 
+			alert('Super weekend!'); break;
+		case 'mon': case 'tue': case 'wed': case 'thu': 
+			alert('It is a weekday...'); break;
+		case 'fri': 
+			alert("Thank God, it's Friday"); break;
+		default: 
+			alert("You are on earth?! Aren't you?");
+	}
+	
+	var sum = 0; 
+	var number = parseInt(prompt("Enter a number from 1 to 9", ""));
+	do {
+		sum += number;		
+	} while (sum <= 100);
+	alert("the neareast value to 100 is : " + sum);
+  </script>
+</head>
+<body>
+  <p>Welcome to JavaScript!</p>
+</body>
+</html>
+

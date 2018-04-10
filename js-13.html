@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+</html>
+	<head>
+	  <meta charset="utf-8">
+	  <title>JS-13</title>
+	  <script type="text/javascript"> 
+		  var aPoint = {
+			  x : 5.5,
+			  y : 10.0,
+			  z : -33.5
+		  };
+		  console.log(aPoint instanceof Object);
+		  for (var attr in aPoint) {
+		  	var value = aPoint[attr];  
+			console.log("name: " + attr + ", value: " + value);
+		  }
+		  console.log(aPoint.hasOwnProperty("z"));
+		  delete aPoint["z"];
+		  var props = Object.keys(aPoint);
+		  console.log(props);
+		  var anotherPoint = Object.create(aPoint);
+		  console.log(anotherPoint);
+ 	  </script>
+	</head>
+	<body>
+	  <p>Hello to Javascript</p>
+	</body>
+</html>
+
+

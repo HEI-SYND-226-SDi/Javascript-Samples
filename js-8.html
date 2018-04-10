@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+</html>
+	<head>
+	  <meta charset="utf-8">
+	  <title>JS-8</title>
+	  <script type="text/javascript"> 
+		// Create an associative array of key-value pairs
+		var settings = {
+		  speed:     9600,  // number
+		  parity:    "NONE",// string
+		  bits:      7,      // number
+		  stop:      2      // number	
+		};
+		// Add a new property via "index" operator, like an array
+		settings['start'] = 1;
+		// Use for..in loop to access all items
+		for (key in settings) {
+		  console.log(key + ": " + settings[key]);
+		}
+		// Associative arrays are objects
+		console.log(typeof settings);  // object
+		// access via dot operator
+		settings.enabled = true;
+		console.log(settings);  
+ 	  </script>
+	</head>
+	<body>
+	  <p>Welcome to JavaScript!</p>
+	</body>
+</html>
+
+

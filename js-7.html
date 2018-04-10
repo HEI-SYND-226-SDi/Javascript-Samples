@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+</html>
+	<head>
+	  <meta charset="utf-8">
+	  <title>JS-7</title>
+	  <script type="text/javascript"> 
+
+		var screws = ["M3","M4","M32"];
+		var smallScrews = screws.map(function (item) {
+			console.log(item);
+			return item.toLowerCase();
+		} );
+		console.log(smallScrews);
+		var fewScrews = screws.filter(function (item) {
+			console.log(item);
+			return item.indexOf("3") !=-1;
+		} );
+		console.log(fewScrews);
+
+ 	  </script>
+	</head>
+	
+	<body>
+	  <p>Welcome to JavaScript!</p>
+	</body>
+</html>
+
+

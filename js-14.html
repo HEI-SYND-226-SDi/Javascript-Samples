@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+</html>
+	<head>
+	  <meta charset="utf-8">
+	  <title>JS-14</title>
+	  <script type="text/javascript"> 
+		  function P2D(x,y) {
+			  this.x = x || 1;
+			  this.y = y || 2;
+			  this.f1 = function() {return this.x+this.y};
+		  };
+		  function P3D(x,y,z) {
+			  P2D.call(this,x,y);
+			  this.z = z || 3;
+			  this.f2 = function() {return this.f1()+this.z};
+		  };
+		  p1 = new P2D;
+		  p2 = new P2D(5,5);
+		  p3 = new P3D;
+		  p4 = new P3D(10,10,10);
+		  console.log(p1);
+		  console.log(p2);
+		  console.log(p3);
+		  console.log(p4); 
+		  console.log(p1.f1());
+		  console.log(p4.f1());
+		  console.log(p4.f2());
+	  </script>
+	</head>
+	<body>
+	  <p>Hello to Javascript</p>
+	</body>
+</html>
+
+

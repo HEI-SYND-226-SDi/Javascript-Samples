@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+</html>
+	<head>
+	  <meta charset="utf-8">
+	  <title>JS-15</title>
+	  <script type="text/javascript"> 
+		  // Define an object with getters and setters
+		  var aPoint = {
+			  _x : 0,
+			  _y : 0,
+			  set x(x) {this._x = x;},
+			  get x() {return this._x;},
+			  set y(y) {this._y = y;},
+			  get y() {return this._y;},
+			  get value() {return Math.sqrt(this._x*this._x+
+				           this._y*this._y);}
+		  } 
+		  console.log(aPoint.x);
+		  aPoint.x = 10;
+		  console.log(aPoint.x);
+		  console.log(aPoint.value);
+		  //aPoint.value = 5;	//this is not a setter	  
+	  </script>
+	</head>
+	<body>
+	  <p>Hello to Javascript</p>
+	</body>
+</html>
+
+
